@@ -5,6 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 DATASET_PATH = 'Churn_Modelling.csv'
 
@@ -26,3 +27,8 @@ X = np.array(ct.fit_transform(X))
 
 ## Split the dataset into the training set and test set  
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+## Feature scaling
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
