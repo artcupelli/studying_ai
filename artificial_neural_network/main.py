@@ -43,3 +43,6 @@ X_test = sc.transform(X_test)
 
 # Initialize the ANN
 ann = tf.keras.models.Sequencial()
+
+# Add the input layer and the first hidden layer
+ann.add(tf.keras.layers.Dense(units=NEURONS_FIRST_HIDDEN_LAYER, activation='relu'))
