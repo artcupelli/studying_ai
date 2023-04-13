@@ -8,6 +8,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 DATASET_PATH = 'Churn_Modelling.csv'
+NEURONS_FIRST_HIDDEN_LAYER = 6 
+NEURONS_SECOND_HIDDEN_LAYER = 6
+NEURONS_OUTPUT_LAYER = 1
+
+###     DATA PRE-PROCESSING
 
 ## Read the dataset
 dataset = pd.read_csv(DATASET_PATH)
@@ -32,3 +37,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
+
+
+###     ANN CONSTRUCTION
+
+# Initialize the ANN
+ann = tf.keras.models.Sequencial()
