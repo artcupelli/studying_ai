@@ -49,3 +49,6 @@ ann.add(tf.keras.layers.Dense(units=NEURONS_FIRST_HIDDEN_LAYER, activation='relu
 
 # Add the second hidden layer
 ann.add(tf.keras.layers.Dense(units=NEURONS_SECOND_HIDDEN_LAYER, activation='relu'))
+
+# Add the output layer 
+ann.add(tf.keras.layers.Dense(units=NEURONS_OUTPUT_LAYER, activation='sigmoid'))
