@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-DATASET_PATH = 'Churn_Modelling.csv'
+DATASET_PATH = '../_datasets/Churn_Modelling.csv'
 NEURONS_FIRST_HIDDEN_LAYER = 6 
 NEURONS_SECOND_HIDDEN_LAYER = 6
 NEURONS_OUTPUT_LAYER = 1
@@ -51,4 +51,4 @@ ann.add(tf.keras.layers.Dense(units=NEURONS_FIRST_HIDDEN_LAYER, activation='relu
 ann.add(tf.keras.layers.Dense(units=NEURONS_SECOND_HIDDEN_LAYER, activation='relu'))
 
 # Add the output layer 
-ann.add(tf.keras.layers.Dense(units=NEURONS_OUTPUT_LAYER, activation='sigmoid'))
+ann.add(tf.keras.layers.Dense(units=NEURONS_OUTPUT_LAYER, activation='sigmoid')) 
