@@ -4,6 +4,7 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
 
 DATASET_PATH = 'Churn_Modelling.csv'
 
@@ -22,3 +23,6 @@ X[:, 2] = le.fit_transform(X[:, 2])
 # 'Geography' column (One-hot encoding)
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [1])], remainder='passthrough')
 X = np.array(ct.fit_transform(X))
+
+## Split the dataset into the training set and test set  
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
