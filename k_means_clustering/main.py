@@ -62,7 +62,7 @@ class K_Means:
         if(not ignore_columns):
             return dataset
         
-        return dataset.drop(columns=[ignore_columns])
+        return dataset.drop(columns=ignore_columns)
         
 
 
