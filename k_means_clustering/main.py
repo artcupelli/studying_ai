@@ -28,20 +28,20 @@ class K_Means:
 
         self.centroids = inital_centroids
 
-    def nearest_centroid(self, x1):
+    def get_nearest_centroid(self, instance):
         min_distance = INFINITE
         all_centroids = self.centroids
         nearest_centroid = all_centroids[0]
 
         for centroid in all_centroids:
-            current_distance = self.euclidian_distance(centroid, x1)
+            current_distance = self.euclidian_distance(centroid, instance)
             if(current_distance < min_distance):
                 min_distance = current_distance
                 nearest_centroid = centroid
 
         return nearest_centroid
 
-    def euclidian_distance(x1, x2):
+    def calculate_euclidian_distance(x1, x2):
         if len(x1) == 0 or len(x2) == 0:
             raise Exception("Both vectors must have at least 01 dimention")
 
