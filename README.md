@@ -1,5 +1,5 @@
 # Studying Artificial Intelligence
-hey! this are my notes and algorithms that I produced during my artificial intelligence studies :)
+hey! this are my notes and algorithms that I produced during my artificial intelligence and data mining studies :)
 
 
 ### References
